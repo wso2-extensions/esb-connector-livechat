@@ -29,7 +29,7 @@ Steps to follow in setting integration test.
  5. Follow the below mentioned steps for adding valid certificate to access LiveChat API over https.
 
 	i)   Extract the certificate for the api url "https://api.livechatinc.com".
-			NOTE : Make sure to use an api method endpoint url to obtain the certificate (e.g. https://api.livechatinc.com/chats )
+		NOTE : Make sure to use an api method endpoint url to obtain the certificate (e.g. https://api.livechatinc.com/chats )
 	ii)  Go to new ESB 4.9.0 folder and place the downloaded certificate in both "{LIVECHAT_HOME}/repository/wso2esb-4.9.0/resources/security/" and "{LIVECHAT_HOME}/src/test/resources/keystores/products/" folders.
 	iii) Navigate to "<ESB_HOME>/repository/resources/security/" using command prompt and execute the following command.
 		 keytool -importcert -file CERT_FILE_NAME -keystore client-truststore.jks -alias "CERT_NAME" 
