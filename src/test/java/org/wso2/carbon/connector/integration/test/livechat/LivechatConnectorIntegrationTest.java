@@ -42,7 +42,7 @@ public class LivechatConnectorIntegrationTest extends ConnectorIntegrationTestBa
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
     
-        init("livechat-connector-1.0.0");
+        init("livechat-connector-1.0.1-SNAPSHOT");
         
         esbRequestHeadersMap = new HashMap<String, String>();
         apiRequestHeadersMap = new HashMap<String, String>(); 
