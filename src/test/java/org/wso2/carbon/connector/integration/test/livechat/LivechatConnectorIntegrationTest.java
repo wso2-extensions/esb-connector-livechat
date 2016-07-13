@@ -328,12 +328,12 @@ public class LivechatConnectorIntegrationTest extends ConnectorIntegrationTestBa
         esbRequestHeadersMap.put("Action", "urn:listChats");
         RestResponse<JSONObject> esbRestResponse =
                 sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_listChats_optional.json");
-        
+
         JSONArray esbResponseArray = esbRestResponse.getBody().getJSONArray("chats");
         
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + "/chats?date_to="+connectorProperties.getProperty("endDate")+"&date_from="+connectorProperties.getProperty("startDate");
         RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
-        
+
         JSONArray apiResponseArray = apiRestResponse.getBody().getJSONArray("chats");
         
         Assert.assertEquals(apiRestResponse.getBody().getString("total"), esbRestResponse.getBody().getString("total"));
@@ -547,7 +547,7 @@ public class LivechatConnectorIntegrationTest extends ConnectorIntegrationTestBa
        
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + "/tickets?assignee="+connectorProperties.getProperty("agentLoginMand")+"&order=asc";
         RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
-        
+
         JSONArray esbTicketsArray = esbRestResponse.getBody().getJSONArray("tickets");
         JSONArray apiTicketsArray = apiRestResponse.getBody().getJSONArray("tickets");
         
