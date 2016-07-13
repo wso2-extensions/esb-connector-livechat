@@ -118,7 +118,7 @@
             }
             // Prefix the urlQuery with '?' and remove the trailing '&'
             if (urlQuery != "") {
-              urlQuery = '?' + urlQuery.substring(0, urlQuery.length-1);
+              urlQuery = '?' + urlQuery.toString().substring(0, urlQuery.toString().lastIndexOf("&"));
               mc.setProperty('uri.var.urlQuery', urlQuery);    
             } 
             mc.setProperty('uri.var.urlQuery', urlQuery);   
@@ -126,7 +126,7 @@
         </script>
         <call>
             <endpoint>
-                <http method="get" uri-template="{uri.var.apiUrl}/chats{+uri.var.urlQuery}"/>
+                <http method="get" uri-template="legacy-encoding:{uri.var.apiUrl}/chats{+uri.var.urlQuery}"/>
             </endpoint>
         </call>
         <!-- Remove custom Headers from the API Response -->
