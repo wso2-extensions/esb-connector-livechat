@@ -33,6 +33,7 @@
                 <arg expression="get-property('uri.var.to')"/>
             </args>
         </payloadFactory>
+        <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
         <call>
             <endpoint>
                 <http method="post" uri-template="{uri.var.apiUrl}/chats/{+uri.var.chatId}/send_transcript"/>

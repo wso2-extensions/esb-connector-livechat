@@ -126,6 +126,7 @@
             mc.setPayloadJSON(payload);
          ]]>
         </script>
+        <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
         <call>
             <endpoint>
                 <http method="post" uri-template="{uri.var.apiUrl}/agents"/>
