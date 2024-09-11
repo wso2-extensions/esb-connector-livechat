@@ -4,7 +4,7 @@
     "category": "Communication",
     "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/LiveChat+Connector",
     "description": "The LiveChat connector allows you to access the LiveChat REST API through the WSO2 ESB. The LiveChat API provides flexible tools that can be used in the creation of new or outstanding projects.",
-    "status": "Active",
+    "status": "Inactive",
     "labels": [
         "connector"
     ],
